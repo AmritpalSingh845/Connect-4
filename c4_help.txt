@@ -1,0 +1,8 @@
+The command to initiate a game is `.c4 @user`, Where "user" is the other person you want to play with. If you want to play alone then do not mention anybody, simply send `.c4`
+How to play:
+Press one of the 7 buttons corresponding to the respective columns in the connect-4 grid and your mark will be placed at the buttom-most empty slot in that column.
+Press the :previous_track: button to undo moves and press :x: to close the game whenever you want to.
+Connect 4 in a row horizontally, vertically or diagonally to win. Have fun!
+:bulb: Protip: Add the :smile: (smile) reaction to redraw the grid. You may also send `+:smile:` to add reactions.
+Invite link:
+https://discordapp.com/api/oauth2/authorize?client_id=560548894224809984&permissions=8&scope=bot
