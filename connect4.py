@@ -61,7 +61,7 @@ async def c4(ctx, p2: discord.User = None):
                     move = list2[-1]
                     grid = emptyslot(grid,move)
                     list2.pop()
-                    await msg.edit(content=" :large_blue_circle: {}'s turn, Undo on {} by {}{}"
+                    await msg.edit(content=" :blue_circle: {}'s turn, Undo on {} by {}{}"
                         .format(p2.mention, str(move + 1), p2.name, retgrid(move)))
                     continue
             except:
@@ -90,7 +90,7 @@ async def c4(ctx, p2: discord.User = None):
                     lm = move
 
                 elif (not onesturn) and usr == p2:
-                    grid[row][move] = ':large_blue_circle:'
+                    grid[row][move] = ':blue_circle:'
                     list2.append(move)
                     onesturn = not onesturn
                     lm = move
@@ -100,12 +100,12 @@ async def c4(ctx, p2: discord.User = None):
         if onesturn:
             await msg.edit(content = ':red_circle:  ' + p1.mention +"'s turn "+ retgrid(lm))
         else:
-            await msg.edit(content = ':large_blue_circle:  ' + p2.mention +"'s turn "+ retgrid(lm))
+            await msg.edit(content = ':blue_circle:  ' + p2.mention +"'s turn "+ retgrid(lm))
 
         if checkwin(grid):
             won = True
             if onesturn:
-                await msg.edit(content = f':large_blue_circle:  {p2.mention} won! :tada:' + retgrid(lm))
+                await msg.edit(content = f':blue_circle:  {p2.mention} won! :tada:' + retgrid(lm))
             else:
                 await msg.edit(content = f':red_circle:  {p1.mention} won! :tada:' + retgrid(lm))
             await msg.clear_reactions()
